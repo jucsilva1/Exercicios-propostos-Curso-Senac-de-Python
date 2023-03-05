@@ -1,0 +1,38 @@
+Portugol                                      Python    
+ 
+escreva("Teste")                     //    print("teste")
+inteiro a = 10                       //    a = int(10)
+cadeia b = "aaa"                     //    b = str("aaa")
+real c = 10.33			     //	   c = float(10.33)	
+inteiro r = 0           
+escreva("Digite um número: ")        //    r = int(input("Digite um número")
+leia(r)  
+escreva("O númerodigitado é: "+ r)   //    print("O número escolhido foi {}".format(r))  
+
+
+
+#inteiro a = 7
+a = int(7)
+
+#cadeia b = "Ze"
+b = str("Ze")
+
+#escreva("Seu nome é: "+b)
+print("Se nome é {}".format(b))
+print("O nome cadastrado é {} e a idade é {}".format(b, a))
+
+
+#inteiro r = 0
+#escreva("Digite um número: ")
+#leia(r)
+
+r = int(input("Digite um número: "))
+print("O número escolhido foi {}".format(r))
+
+escolha(a)					match (a):
+	caso 1:						case 1:
+	    escreva("texto")				    print("texto")
+	caso 2:						case 2:
+	    escreva("texto")				    print("texto")
+	caso contrario:					case _:
+	    escreva(""aa)				    print("texto") 	

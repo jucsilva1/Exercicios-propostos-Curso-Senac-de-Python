@@ -1,0 +1,11 @@
+cont = int(0) 
+tel1 = int(0) 
+tel2 = int(0) 
+nome = str("")
+for cont in range(0, 3, 1):
+    nome = str(input("Digite um nome: "))
+    tel1 = int(input("Digite um telefone1: "))
+    tel2 = int(input("Digite um telefone2: "))
+    print(f"O nome digitado foi: {nome}.")
+    print(f"O telefone1 digitado foi: {tel1}.")
+    print(f"O telefone2 digitado foi: {tel2}.")

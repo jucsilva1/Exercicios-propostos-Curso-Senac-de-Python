@@ -1,0 +1,338 @@
+Atividades 1 em Python
+
+Questão 1 At1
+
+salario  = float(input("Qual é o seu salário? "))
+ferias   = salario * 1.33
+bonus    = salario * 1.75
+decimo13 = salario
+total = float(salario + ferias + bonus +  decimo13)
+print("Somando tudo seu você tem direito a R${} reais.".format(total))
+
+Questão 2 At1
+
+saldo = float(0.0)
+valor  = float(input("Quanto você tem na sua conta? "))
+compra1 = float(input("Qual valor da sua primeira compra? "))
+compra2 = float(input("Qual valor da sua segunda compra? "))
+total = compra1 + compra2
+
+if (valor < total):
+    print("Você não tem dinheiro suficiente é hora de devolver as compras.")
+elif(valor > total):
+    saldo = valor - total
+    print("Você ainda tem {} reais então pode gastar mais.".format(saldo))
+else:
+    saldo = valor - total
+    print("Você conseguiu pagar as compras porém ficou sem saldo R${}.".format(saldo))
+	
+Questão 3 At1
+
+print("-------------------------------\n")
+print("-----Cursos Senac Araxá-MG-----\n\n")
+print("  1 - Tec. em Informática \n")
+print("  2 - Tec. em Enfermagem \n")
+print("  3 - Tec. em Estética  \n")
+print("-------------------------------\n")
+curso = int(input("Qual curso do Senac você prefere? "))
+if(curso == 1):
+	print("Vai ganhar dinheiro.")
+elif(curso == 2):
+	print("É bom, mas não tanto quanto Tec. em Informática.")
+elif(curso == 3):
+	print("Quer ficar bonita(o) para um(a) Tec. em Informática.")
+else:
+	print("Opção indisponível, mas na dúvida vou te matricular no Curso Tec.em Informática!")
+	
+Questão 4 At1
+
+pessoas = int(input("Quantas pessoas foram mortas por este criminoso? "))
+pena = int((pessoas * 3) -3)
+tempo = int(pena + 15)
+print("Esse criminoso pegará {} anos de cadeia.".format(tempo))
+
+crime = str(input("Comenteu algum outro crime? sim ou nao ? "))
+penaextra = int(tempo * 2)
+if(crime == "sim"):
+    print("Sua pena será o dobro da pena ficando um total de {} anos.".format(penaextra))
+elif(crime == "nao"):
+    print("Seu tempo de prisão será mantido com a pena de {} anos de prisão.".format(tempo))
+else:
+    print("Opção inválida!")
+	
+Questão 5 At1
+
+salario = float(input("Qual é o seu salário? "))
+ferias   = salario * 1.33
+bonus    = salario * 0.74
+promocao = salario * 1.45
+total = float(salario + ferias + bonus)
+print("Baseado no seu salário suas férias seriam R${} , seu bônus seria R${} e caso você fosse promovida seria R${}.".format(ferias, bonus, promocao))
+
+
+Questão 6 At1
+
+peso = float(input("Qual é o seu peso em kilos? "))
+dias = float(input("Quantos dias vai a academia nesse ano?  "))
+print("Veja abaixo ganho e perda conforme os dias de academia.")
+ganho = float(0.020 * dias)
+print("----------------------------------------")
+print("Ganho de massa muscular ao dia",ganho,"KG.")
+print("----------------------------------------")
+perda = float(0.040 * dias)
+print("----------------------------------------")
+print("Perda de gordura ao dia",perda, "KG.")
+print("----------------------------------------")
+
+dif = float(ganho - perda)
+pesoatual = float(peso + dif)
+
+print("Você pesava {} e perdeu {} kilos porem ganhou {} de massa muscular, pesando hoje {}.".format(peso, perda, ganho, pesoatual))
+
+Questão 7 At1
+
+import random 
+
+sorteion1 = random.randint(0, 10)
+sorteion2 = random.randint(0, 10)
+sorteion3 = random.randint(0, 10)
+sorteion4 = random.randint(0, 10)
+print("Para simples conferência: os núemros sorteados",sorteion1,sorteion2,sorteion3,sorteion4)
+	
+n1 = int(input( "Digite o primeiro número: "))
+n2 = int(input( "Digite o segundo número: "))
+n3 = int(input( "Digite o terceiro número: "))
+n4 = int(input( "Digite o quarto número: "))
+
+if(n1 == sorteion1 and n2 == sorteion2 and n3 == sorteion3 and n4 == sorteion4):
+		print("Você tirou o grande prêmio de R$100.000,00.")	
+elif(n1 == sorteion1 and n2 == sorteion2  or n3 == sorteion3 and n4 == sorteion4):
+		print("Você não ganhou, mas troque esse bilhete por outro gratuitamente.")
+else:
+		print("Mais sorte na próxima.")	
+		
+Questão 8 At1
+		
+dist = int(input("Qual a distância em quilometros? "))
+hecto = dist * 10
+deca  = dist * 100
+metro = dist * 1000
+cent  = dist * 100000
+mili  = dist * 1000000
+
+print("{} quilômetro(s) convertido(s):".format(dist))
+print("Em hectômentros é {} hm, em decâmetros é {} dam, em metros é {} metros, em centímetros é {} cm, em milímetros é  {} mm.".format(hecto, deca, metro, cent, mili))
+
+Atividades 2 em Python
+
+Questão 1 At2
+
+goku = 0
+cell = 0
+vegeta = 0
+
+print("Jogo dos personagens Dragon Ball Z")
+print("[1] goku")
+print("[2] cell")
+print("[3] vegeta")
+
+persona = str(input("Algum deste personagens tem cabelo? "))
+if(persona == "sim"):
+    goku = goku + 1 
+else:
+    cell = cell + 1
+    vegeta = vegeta + 1
+        
+p2 = str(input("Este personagem é um adulto? "))
+if(p2 == "sim"):
+    cell = cell + 1
+else:
+    goku = goku + 1
+    vegeta = vegeta + 1
+
+p3 = str(input("Este personagem é melhor que Goku? "))
+if(p3 == "sim"):
+    vegeta = vegeta + 1
+else:
+    goku = goku + 1
+    cell = cell + 1
+print("O personagem Goku fez  {} pontos.".format(goku))
+print("O personagem Cell fez {} pontos.".format(cell))
+print("O personagem Vegeta fez  {} pontos.".format(vegeta))
+
+Questão 2 At2
+
+vip = ""
+normal = ""
+cliente = str(input("O produto é para um cliente vip ou normal? "))
+
+if(cliente =="vip"):
+    valor = int(input("Qual valor da compra? "))
+    print("Cliente Vip tem acesso às super bebida A, super bebida B e super bebida C.")
+    if(valor >= 8000):
+        print("Terá acesso também a super bebida D.")
+if(cliente == "normal"):
+    print("Cliente normal tem acesso às bebida normal A, bebida normal B e bebida normalvip C.")
+	
+Questão 3 At2
+
+n1 = int(input("Digite um número: "))
+if(n1 %5 ==0):
+    print("É múltiplo de 5")
+else:
+    print("É um número par")
+n2 = int(input("Digite outro número: "))
+if(n2 %5 ==0):
+    print("É múltiplo de 5")
+else:
+    print("É um número par")
+n3 = int(input("Digite outro número: "))
+if(n3 %5 ==0):
+    print("É múltiplo de 5")
+else:
+    print("É um número par")
+n4 = int(input("Digite outro número: "))
+if(n4 %5 ==0):
+    print("É múltiplo de 5")
+else:
+    print("É um número par")
+n5 = int(input("Digite outro número: "))
+if(n5 %5 ==0):
+    print("É múltiplo de 5")
+else:
+    print("É um número par")
+	
+Questão 4 At2
+	
+print("Matérias do Curso tec. em Informática no Senac")
+print("[1] Lógica de programção")
+print("[2] Excel")
+print("[3] Autocad")
+print("[4] Python")
+op = int(input("Qual é a sua escolha?: "))
+match (op):
+    case 1:
+        print("Esta matéria é a base para todas as outras de progaramação")
+    case 2:
+        print("Matéria que agrega bastante para nossa vida")
+    case 3:
+        print("Matéria surpresa muito legal!")
+    case 4:
+        print("Esta é a matéria atual e um grande desafio mas, muito boa!")
+		
+Atividades 3 em Python
+
+Questão 1 At3
+
+op = 0
+print("Qual das doença abaixo você tem? ")
+print("1 - Diabetes")
+print("2 - Hipertensão")
+print("3 - Depressão")
+print("4 - Alzheimer")
+op = int(input("5 - Nenhuma das doenças. Sua opção: "))
+match (op):
+    case 1:
+        print("Você deve evitar ingerir alimentos que contenham açucares, gorduras e fazer exercícios regularmente!!!")
+    case 2:
+        print("Você deve evitar ingerir alimentos com muito sal e ou muito temperados e fazer exercícios regularmente!!!")
+    case 3:
+        print("Você deve hábitos alimentares saudáveis, ter boas amizades e fazer exercícios regularmente!!!")
+    case 4:
+        print("Você deve boa alimentação para o cérebro, fazer cruzadinhas e fazer exercícios regularmente!!!")
+    case 5:
+        print("Levante a mão para o céu e agradeça mas, nunca se esqueça de fazer exercícios regularmente e ter uma alimentação saudável.")
+    case _:
+        print("Opção inválida!!")
+		
+Questão 2 At3
+
+goku = 0
+cell = 0
+vegeta = 0
+
+print("Jogo dos personagens Dragon Ball Z")
+print("[1] Goku")
+print("[2] Cell")
+print("[3] Vegeta")
+
+persona = str(input("Algum deste personagens tem cabelo? sim ou não? "))
+if(persona == "sim"):
+    goku = goku + 1
+else:
+    cell = cell + 3
+    vegeta = vegeta + 1
+       
+p2 = str(input("Este personagem é um adulto? sim ou não? "))
+if(p2 == "sim"):
+    cell = cell + 1
+else:
+    goku = goku + 1
+    vegeta = vegeta + 2
+
+p3 = str(input("Este personagem é melhor que Goku? sim ou não? "))
+if(p3 == "sim"):
+    vegeta = vegeta + 1
+else:
+    cell = cell + 2
+    goku = goku + 3
+  
+
+if(goku > vegeta and goku > cell):
+    maior = goku
+    print("Goku venceu!")
+if(cell > vegeta and cell > goku):
+    maior = cell
+    print("Cell venceu!")
+if(vegeta > cell  and goku):
+    maior = vegeta
+    print("Vegeta venceu!")
+if(vegeta == goku and goku == cell):
+    print("Todos empataram!")
+
+    
+print(f"O personagem Goku fez  {goku} pontos.")
+print(f"O personagem Cell fez {cell} pontos.")
+print(f"O personagem Vegeta fez  {vegeta} pontos.")
+
+Questão 3 At3
+
+vip = ""
+normal = ""
+cliente = str(input("O produto é para um cliente vip ou normal? "))
+
+if(cliente =="vip"):
+    valor = int(input("Qual valor da compra? "))
+    print("Cliente Vip tem acesso às super bebida A, super bebida B e super bebida C.")
+    if(valor >= 8000):
+        print("Terá acesso também a super bebida D.")
+if(cliente == "normal"):
+    print("Cliente normal tem acesso às bebida normal A, bebida normal B e bebida normalvip C.")
+	
+Questão 4 At3
+
+numero = 0
+multiplo = 1
+numero = int(input("Digite um número: "))
+while(numero != 1):
+    print("{} X ".format(numero),end="")
+    multiplo = multiplo * numero
+    numero = numero - 1
+print("1 = {}".format(multiplo))
+
+Questão 5 At3
+
+num = 0
+cont = 0
+
+while(cont < 5):
+    num = int(input("Digite um número: "))
+    cont = cont + 1
+    if(num %5 == 0):
+        print("É multiplo de 5.")
+    if(num > 10):
+        print("É maior do que 10.")
+    if(num < 3):
+        print("É menor do que 3.")
+		
+

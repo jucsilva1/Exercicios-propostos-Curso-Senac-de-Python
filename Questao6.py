@@ -1,0 +1,16 @@
+peso = float(input("Qual é o seu peso em kilos? "))
+dias = float(input("Quantos dias vai a academia nesse ano?  "))
+print("Veja abaixo ganho e perda conforme os dias de academia.")
+ganho = float(0.020 * dias)
+print("----------------------------------------")
+print("Ganho de massa muscular ao dia",ganho,"KG.")
+print("----------------------------------------")
+perda = float(0.040 * dias)
+print("----------------------------------------")
+print("Perda de gordura ao dia",perda, "KG.")
+print("----------------------------------------")
+
+dif = float(ganho - perda)
+pesoatual = float(peso + dif)
+
+print("Você pesava {} e perdeu {} kilos porem ganhou {} de massa muscular, pesando hoje {}.".format(peso, perda, ganho, pesoatual))
